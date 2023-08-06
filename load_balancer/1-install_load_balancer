@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# comment
+# install load balancer
 sudo apt update -y
 sudo apt install haproxy -y
 echo 'ENABLED=1' | sudo tee -a /etc/default/haproxy
 printf %s 'backend web-backend
         balance roundrobin
-        server 5744-web-01 18.234.88.95:80 check
-        server 5744-web-02 54.242.135.183:80 check
+        server 5748-web-01 107.22.138.187:80 check
+        server 5748-web-02 54.144.51.103:80 check
 frontend http
         bind *:80
         mode http
