@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-# bash script that runs 'apache -v2' on docker container
+# run apache on holbertonschool/265-0 container
+
 echo "ServerName localhost" >> /etc/apache2.conf
-service apache2 Hello Holberton
+service apache2 start
